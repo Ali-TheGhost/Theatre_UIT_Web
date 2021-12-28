@@ -28,7 +28,7 @@ class Ajax_Form {
     # Check this for more configurations: https://blog.mailtrap.io/phpmailer
     const HOST        = 'smtp.gmail.com'; # SMTP server
     const USERNAME    = 'smtp.test.2021.12.28@gmail.com'; # SMTP username
-    const PASSWORD    = 'Google.123'; # SMTP password
+    const PASSWORD    = 'pazazhucqbfuqnek'; # SMTP password
     const SECRET_KEY  = '6Ldf9RUdAAAAAASK7bx1N2y9L02Y9iHteVuUymLE'; # GOOGLE secret key
     const SMTP_SECURE = PHPMailer::ENCRYPTION_STARTTLS;
     const SMTP_AUTH   = true;
@@ -113,8 +113,8 @@ class Ajax_Form {
                 $mail->Port       = self::PORT;        # TCP port
 
                 # Recipients
-                $mail->setFrom(self::USERNAME, 'IMD');
-                $mail->addAddress("ali.echchafi@gmail.com", "ali");
+                $mail->setFrom(self::USERNAME, 'Theatre UIT');
+                $mail->addAddress("ali.echchafi@gmail.com", "Theatre UIT");
                 //$mail->AddCC(self::USERNAME, 'Dev_copy');
                 $mail->addReplyTo(self::USERNAME, 'Information');
 
