@@ -26,13 +26,13 @@ class Ajax_Form {
 
     # Constants to redefined
     # Check this for more configurations: https://blog.mailtrap.io/phpmailer
-    const HOST        = 'mail.imd.ma'; # SMTP server
-    const USERNAME    = 'noreply@imd.ma'; # SMTP username
-    const PASSWORD    = 'r7cZ%6t8'; # SMTP password
+    const HOST        = 'smtp.gmail.com'; # SMTP server
+    const USERNAME    = 'smtp.test.2021.12.28@gmail.com'; # SMTP username
+    const PASSWORD    = 'Google.123'; # SMTP password
     const SECRET_KEY  = '6Ldf9RUdAAAAAASK7bx1N2y9L02Y9iHteVuUymLE'; # GOOGLE secret key
     const SMTP_SECURE = PHPMailer::ENCRYPTION_STARTTLS;
     const SMTP_AUTH   = true;
-    const PORT        = 25;
+    const PORT        = 587;
     const SUBJECT     = 'New message !';
     const HANDLER_MSG = [
         'success'       => '✔️ Your message has been sent !',
@@ -114,7 +114,7 @@ class Ajax_Form {
 
                 # Recipients
                 $mail->setFrom(self::USERNAME, 'IMD');
-                $mail->addAddress("alifursio@gmail.com", "ali");
+                $mail->addAddress("ali.echchafi@gmail.com", "ali");
                 //$mail->AddCC(self::USERNAME, 'Dev_copy');
                 $mail->addReplyTo(self::USERNAME, 'Information');
 
